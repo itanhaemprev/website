@@ -8,12 +8,52 @@
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat-core();
+$mat-itaprev-blue: (
+  500: #284b8c,//primary
+  100: #5c76bd,//light
+  700: #00245e,//dark
+  contrast: (
+    500: $light-primary-text,
+    100: $dark-primary-text,
+    700: $light-primary-text,
+  )
+);
+$mat-itaprev-light-blue: (
+  500: #00b0f7,//primary
+  100: #68e2ff,//light
+  700: #0081c4,//dark
+  contrast: (
+    500: $dark-primary-text,
+    100: $dark-primary-text,
+    700: $dark-primary-text,
+  )
+);
+$mat-itaprev-red: (
+  500: #d51a1f,//primary
+  100: #ff5949,//light
+  700: #9b0000,//dark
+  contrast: (
+    500: $light-primary-text,
+    100: $dark-primary-text,
+    700: $light-primary-text,
+  )
+);
+$mat-itaprev-pink: (
+  500: #ff96d8,//primary
+  100: #ffc8ff,//light
+  700: #ca66a6,//dark
+  contrast: (
+    500: $dark-primary-text,
+    100: $dark-primary-text,
+    700: $light-primary-text,
+  )
+);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$website-primary: mat-palette($mat-indigo);
-$website-accent: mat-palette($mat-pink, A200, A100, A400);
+$website-primary: mat-palette($mat-itaprev-blue);
+$website-accent: mat-palette($mat-yellow);
 
 // The warn palette is optional (defaults to red).
 $website-warn: mat-palette($mat-red);
@@ -30,3 +70,10 @@ $website-theme: mat-light-theme($website-primary, $website-accent, $website-warn
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.fa, .fab, .fal, .far, .fas{
+  //font-size: 24px;
+  //text-align: center
+}
+.card-header-custom .mat-card-header-text{
+  margin: 0;
+}

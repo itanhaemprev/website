@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthComponent } from './auth.component';
-import { LoginComponent } from './login/login.component';
-import { ForgotComponent } from './forgot/forgot.component';
-import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [{
   path: '',
   component: AuthComponent,
   children: [
-    { path: 'login', component: LoginComponent },
-    { path: 'forgot', component: ForgotComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: '', redirectTo: 'login', pathMatch: 'full'}
-  ] 
+    { path: 'login', loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)},
+    { path: 'forgot', loadChildren: () => import('./forgot/forgot.module').then(mod => mod.ForgotModule)},
+    { path: 'register', loadChildren: () => import('./register/register.module').then(mod => mod.RegisterModule)},
+    { path: '', redirectTo: 'login', pathMatch: 'full' } 
+  ]
 }];
 
 @NgModule({

@@ -1,0 +1,50 @@
+@import "../../../styles.scss";
+.noticias {
+    margin: 16px;
+    .mat-card {
+        //margin-top: 10px;
+    }
+    .card-noticia {
+        .mat-card-title-group {
+            margin-left: 10px;
+        }
+    }
+}
+#servicos{
+    min-height: 300px;
+    background-color: #dedede;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .services-button{
+        margin-bottom: 20px;
+        @include mat-elevation(2);
+        background-color: white;
+    }
+    .mat-icon {
+        width: auto;
+        height: auto;
+    }
+    .boletim {
+        color: map-get($mat-light-blue, 700)
+    }
+    .duvidas {
+        color: map-get($mat-light-green, 700)
+    }
+    .leis {
+        color: map-get($mat-purple, 700)
+    }
+}
+.services-button {
+    height: 200px;
+    
+}
+#transparencia {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: map-get($mat-light-blue, A700);
+    color: white;
+    .mat-icon {
+        width: auto;
+        height: auto;
+    }
+}

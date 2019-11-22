@@ -1,0 +1,19 @@
+@import "../../../../../styles.scss";
+.name {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    color: map-get($mat-itaprev-blue, 500);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px  rgba(0, 0, 0, 0.12);
+}
+.logo {
+    padding: 10px;
+    margin: 10px;
+    font-size: 36px;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    border: 8px solid map-get($mat-itaprev-blue, 500);
+    @include mat-elevation(6);
+}

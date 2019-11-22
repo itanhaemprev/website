@@ -1,9 +1,9 @@
 <app-carousel></app-carousel>
 <section fxLayout="row">
-    <div fxFlex=80 fxFlexOffset=10 fxLayout="row wrap" class="noticias" fxLayoutGap="10px">
+    <div @lista-of-news fxFlex=80 fxFlexOffset=10 fxLayout="row wrap" class="noticias" fxLayoutGap="10px">
         <section fxFlex.gt-sm='0 2 calc(50%-10px)' fxFlex.lt-md=100>
             <h1 class="mat-h1">Notícias</h1>
-            <section fxLayoutGap="10px" fxLayout="column" fxLayoutAlign="space-between stretch">
+            <section  fxLayoutGap="10px" fxLayout="column" fxLayoutAlign="space-between stretch">
                 <mat-card fxLayout="row" fxLayoutAlign="space-between start" class="card-noticia" >
                         <img fxFlexOrder=1 style="width: 150px; height: 150px;" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/news-1.jpg">
                     <mat-card-title-group fxFlexOrder=2>
@@ -136,7 +136,7 @@
 <section fxLayout="row" id="servicos">
     <section fxFlex=80 fxLayout="column" fxFlexOffset=10 fxLayoutAlign="space-around center">
         <h1 class="mat-h1">Contribuinte</h1>
-        <p fxFlex fxLayoutAlign="space-between center" fxLayout="row wrap">
+        <p fxFlex @list-of-services-button fxLayoutAlign="space-between center" fxLayout="row wrap">
 
             <button mat-button class="services-button" fxLayout="column" fxLayoutAlign="space-around center"
                 fxFlex='0 3 calc(33%-10px)' fxFlex.lt-sm=100>

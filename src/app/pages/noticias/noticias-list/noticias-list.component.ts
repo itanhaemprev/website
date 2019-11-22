@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticiasService } from '../../noticias.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-noticias-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasListComponent implements OnInit {
 
-  constructor() { }
+  noticias: Observable<any>;
+  constructor( private NoticiasService: NoticiasService) { }
 
   ngOnInit() {
+    this.getNoticias();
+  }
+
+  getNoticias() {
+   this.noticias = this.NoticiasService.getAll()
   }
 
 }

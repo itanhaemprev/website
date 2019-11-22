@@ -17,6 +17,6 @@ import { MenuComponent } from './layout/header/menu/menu.component';
     CommonModule,
     PagesRoutingModule,
     SharedModule
-  ]
+  ],
 })
 export class PagesModule { }

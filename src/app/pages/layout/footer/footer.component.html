@@ -1,5 +1,5 @@
-<footer class="mat-toolbar mat-primary">
-  <section fxFlex=80 fxLayout="row wrap"  fxFlexOffset=10>
+<footer class="mat-toolbar mat-primary" fxLayoutAlign='center center'>
+  <section fxFlex.lt-xl=80 fxFlex.xl=70 fxLayout="row wrap"  fxFlexOffset=10>
     <section fxFlexOrder=3 fxFlex='0 3 calc(33%-10px)' fxFlex.lt-md=100>
       <p class="mat-title">
         Fale com a gente:
@@ -11,8 +11,6 @@
       </p>
        <p><a class="mat-display-1" href="tel:+551334277183">(13) 3427-7183</a></p>
        <p><a class="mat-display-1" href="tel:+551334269426">(13) 3426-9426</a></p>
-        
-      
     </section>
     <section fxFlexOrder=2 class="services" fxFlex='0 3 calc(33%-10px)' fxFlex.lt-md=100 fxLayout="column" fxLayoutAlign="start start">
       <p class="mat-title">
@@ -44,6 +42,19 @@
         Itanhaém, SP 11740-000<br>
         Brasil
       </address>
+      <span>
+        <a mat-icon-button matTooltip="Abrir no Waze" target="_blank"
+            href="https://www.waze.com/ul?place=ChIJyX8XxYLV0ZQRjeEXipyUVbA&ll=-24.18170260%2C-46.78449890&navigate=yes">
+            <img src="../../../../assets/waze.svg" alt="" srcset="">
+        </a>
+        <a mat-icon-button matTooltip="Abrir no Uber"
+            href="https://m.uber.com/ul/?action=setPickup&client_id=_ccugWu7b2wSD-OxHqpvaXrWzdsBg-X_&pickup=my_location&dropoff[formatted_address]=Avenida%20Rui%20Barbosa%2C%20408%20-%20Centro%2C%20Itanha%C3%A9m%20-%20SP%2C%20Brasil&dropoff[latitude]=-24.181862&dropoff[longitude]=-46.784378">
+            <img src="../../../../assets/uber.svg" alt="" srcset="">
+        </a>
+        <a mat-icon-button matTooltip="Abrir no Google Maps" href="https://goo.gl/maps/KLSXCR9VVFM3yvre6">
+            <img src="../../../../assets/maps.png" height="24px" alt="" srcset="">
+        </a>
+    </span>
     </section>
   </section>
 </footer>

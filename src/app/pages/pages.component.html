@@ -1,5 +1,8 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-
-
-<app-footer></app-footer>
+<div fxLayout='column' fxFill>
+    <app-header></app-header>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    <span fxFlex='1 1 auto'></span>
+    <app-footer></app-footer>
+</div>

@@ -6,16 +6,7 @@ import { bounceInUp, flip } from 'ng-animate';
   selector: 'app-logo',
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.scss'],
-  animations: [
-    trigger('animation-logo', [
-      transition(':enter',[
-        query('.logo', [
-          useAnimation(flip)
-        ])
-        
-      ])
-    ])
-  ]
+
 })
 export class LogoComponent implements OnInit {
 

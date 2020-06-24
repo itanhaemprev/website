@@ -1,16 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, transition, useAnimation } from '@angular/animations';
-import { bounce, bounceIn, bounceOut, bounceInLeft } from "ng-animate";
+import { RouterOutlet } from '@angular/router';
+import { slideInAnimation } from 'src/app/animations';
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.scss'],
   animations: [
-    // animation triggers go here
-    trigger('flyInOut', [
-      transition('* => *', useAnimation(bounceInLeft)),
-    ])
-      
+    slideInAnimation
   ]
 })
 export class ContatoComponent implements OnInit {

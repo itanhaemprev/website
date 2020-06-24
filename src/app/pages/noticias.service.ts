@@ -10,6 +10,6 @@ export class NoticiasService {
   constructor(private http: HttpClient ) {}
 
   getAll() {
-    return this.http.get(environment.serverUrl + "posts")
+    return this.http.get(environment.serverUrl + 'posts')
   }
 }

@@ -1,5 +1,8 @@
 <ngx-hm-carousel
+  [(ngModel)]="currentIndex"
   [show-num]="1"
+  [autoplay]="autoplay"
+  [infinite]="infinite"
   [autoplay-speed]="speed"
   [infinite]="infinite"
   [drag-many]="true"
@@ -11,10 +14,16 @@
     <article class="item cursor-pointer"
       ngx-hm-carousel-item
       *ngFor="let avatar of avatars; let i = index"
-        [ngClass]="{'visible': currentIndex===i}">
-      <div class="img" (click)="click(i)"
-        [style.backgroundImage]="'url('+avatar.url+')'">
-        {{i}}
+        [ngClass]="{'visible': currentIndex==i}">
+      <div class="img"
+        [style.backgroundImage]="'url('+avatar.url+')'" fxLayoutAlign='center center'>
+        <section fxFlex.lt-sm='90%' fxFlex.lt-xl=80 fxFlex.xl=70 fxLayoutAlign='end start' fxLayout='column' style="background-color: rgba(40,75,140, .5); color: white; padding: 16px;" class="mat-elevation-z6">
+          <h1>Itanhaem-prev ultrapassa meta atuarial de 2019 em 5,85% {{i}}</h1>
+          <p>
+            Percentual foi alcançado com esforço e excelente gestão dos membros do conselho de administração, representados na pessoa do presidente ronnie alexandre aleluia, em conjunto com o comitê de investimentos e a diretoria executiva do itanhaémprev. abaixo gráfico demonstrativo.
+          </p>
+          <a mat-flat-button href="" color='primary' routerLink='/noticias'>Ler mais</a>
+        </section>
       </div>
     </article>
     <ng-template #infiniteContainer></ng-template>
@@ -23,7 +32,7 @@
   <!-- only using in infinite mode or autoplay mode, that will render with-->
   <ng-template #carouselContent let-avatar let-i="index">
     <article class="item cursor-pointer"
-      [ngClass]="{'visible': currentIndex===i}">
+      [ngClass]="{'visible': currentIndex==i}">
       <div class="img" (click)="click(i)"
         [style.backgroundImage]="'url('+avatar.url+')'">
         {{i}}

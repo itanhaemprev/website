@@ -1,13 +1,10 @@
-@import "../../../styles.scss";
-.noticias {
-    margin: 16px;
-    .mat-card {
-        //margin-top: 10px;
+mat-card.noticia {
+    //margin: 5px;
+    .mat-button {
+        padding: 0 8px;
     }
-    .card-noticia {
-        .mat-card-title-group {
-            margin-left: 10px;
-        }
+    .mat-card-title {
+        line-height: normal;
     }
 }
 #servicos{
@@ -15,9 +12,9 @@
     background-color: #dedede;
     padding-top: 50px;
     padding-bottom: 50px;
-    .services-button{
+    .services-button {
         margin-bottom: 20px;
-        @include mat-elevation(2);
+        // @include mat-elevation(2);
         background-color: white;
     }
     .mat-icon {
@@ -25,23 +22,29 @@
         height: auto;
     }
     .boletim {
-        color: map-get($mat-light-blue, 700)
+        // color: map-get($mat-light-blue, 700)
     }
     .duvidas {
-        color: map-get($mat-light-green, 700)
+        // color: map-get($mat-light-green, 700)
     }
     .leis {
-        color: map-get($mat-purple, 700)
+        // color: map-get($mat-purple, 700)
     }
 }
 .services-button {
     height: 200px;
-    
+    .mat-icon{
+        font-size: 72px;
+        width: 72px;
+        display: inline-block;
+        height: 72px;
+        overflow: hidden;
+    }
 }
 #transparencia {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: map-get($mat-light-blue, A700);
+    // background-color: map-get($mat-light-blue, A700);
     color: white;
     .mat-icon {
         width: auto;

@@ -69,11 +69,8 @@ $website-theme: mat-light-theme($website-primary, $website-accent, $website-warn
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.fa, .fab, .fal, .far, .fas{
-  //font-size: 24px;
-  //text-align: center
-}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; height: 100%;}
+
 .card-header-custom .mat-card-header-text{
   margin: 0;
 }

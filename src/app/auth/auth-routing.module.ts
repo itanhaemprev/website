@@ -10,7 +10,7 @@ const routes: Routes = [{
     { path: 'login', loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)},
     { path: 'forgot', loadChildren: () => import('./forgot/forgot.module').then(mod => mod.ForgotModule)},
     { path: 'register', loadChildren: () => import('./register/register.module').then(mod => mod.RegisterModule)},
-    { path: '', redirectTo: 'login', pathMatch: 'full' } 
+    { path: '', redirectTo: 'login', pathMatch: 'full' }
   ]
 }];
 

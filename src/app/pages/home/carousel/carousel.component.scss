@@ -1,8 +1,10 @@
 $transition_time:.2s;
- 
+.transition {
+  transition: all $transition_time ease-in-out;
+}
 .carousel {
   color:white;
-  height: 300px;
+  height: auto;
   .content {
     display: flex;
  
@@ -41,6 +43,15 @@ $transition_time:.2s;
     &.visible {
       opacity: 1;
     }
+  }
+
+  .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: #ff5252;
   }
  
   .click-area {

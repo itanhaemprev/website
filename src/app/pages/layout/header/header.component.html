@@ -1,3 +1,90 @@
-<app-top-bar></app-top-bar>
-<app-logo ></app-logo>
-<app-menu ></app-menu>
+<mat-toolbar color='primary'>
+    <mat-toolbar-row fxLayoutAlign='center center' style="height: 100px;">
+        <section fxFlex.lt-sm='90' fxFlex.lt-xl=80 fxFlex.xl=70>
+            
+            <app-logo routerLink='/'></app-logo>
+            <span fxFlex='1 1 auto'></span>
+
+            <button mat-icon-button>
+                <mat-icon>format_size</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>accessibility_new</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>invert_colors</mat-icon>
+            </button>
+        </section>
+    </mat-toolbar-row>
+    <mat-toolbar-row fxHide fxShow.lt-md fxLayoutAlign='center center'>
+        <section fxFlex.lt-sm='90' fxFlex.lt-xl=80 fxFlex.xl=70 >
+            <button mat-button ><mat-icon>menu</mat-icon> MENU</button> 
+        </section>
+    </mat-toolbar-row>
+    <mat-toolbar-row fxLayoutAlign='center center' fxHide.lt-md>
+        <section fxFlex.lt-xl=80 fxFlex.xl=70  fxLayoutAlign='space-between center'>
+            
+            <a mat-button [matMenuTriggerFor]="instituto" routerLinkActive="mat-accent">Instituto <mat-icon>
+                    arrow_drop_down</mat-icon> </a>
+
+            <a mat-button [routerLink]="[ '/noticias' ]" routerLinkActive="mat-accent">Noticias</a>
+            <a mat-button [matMenuTriggerFor]="transparencia">Transparencia <mat-icon>arrow_drop_down</mat-icon></a>
+
+            <a mat-button [matMenuTriggerFor]="beneficios">Benefícios <mat-icon>arrow_drop_down</mat-icon></a>
+
+            <a mat-button [matMenuTriggerFor]="servicos">Serviços <mat-icon>arrow_drop_down</mat-icon></a>
+
+            <a mat-button [routerLink]="[ '/legislacao' ]" routerLinkActive="mat-accent">Legislação</a>
+            <a mat-button [routerLink]="[ '/' ]" [matMenuTriggerFor]="editais">Editais <mat-icon>arrow_drop_down
+                </mat-icon>
+            </a>
+
+            <a mat-button [routerLink]="[ '/contato' ]" routerLinkActive="mat-accent">Contato</a>
+        </section>
+
+
+    </mat-toolbar-row>
+    <mat-menu #instituto="matMenu">
+        <a mat-menu-item [routerLink]="[ '/instituto/quem-somos' ]" routerLinkActive="mat-button mat-primary">Quem
+            Somos</a>
+        <a mat-menu-item [routerLink]="[ '/instituto/conselhos' ]"
+            routerLinkActive="mat-button mat-primary">Conselhos</a>
+        <a mat-menu-item [routerLink]="[ '/instituto/diretoria-e-divisoes' ]"
+            routerLinkActive="mat-button mat-primary">Diretoria e Divisões</a>
+        <a mat-menu-item [routerLink]="['/instituto/comite-investimentos']"
+            routerLinkActive="mat-button mat-primary">Comitê
+            de Investimento</a>
+        <a mat-menu-item [routerLink]="['/instituto/reunioes-deliberativas']"
+            routerLinkActive="mat-button mat-primary">Reuniões Deliberativas</a>
+        <a mat-menu-item [routerLink]="['/instituto/cronograma-de-acoes']"
+            routerLinkActive="mat-button mat-primary">Cronograma de Ações</a>
+    </mat-menu>
+    <mat-menu #transparencia="matMenu">
+        <a mat-menu-item [routerLink]="[ '/' ]">Contratos</a>
+        <a mat-menu-item [routerLink]="[ '/' ]">Evolução Patrimonial</a>
+        <a mat-menu-item [matMenuTriggerFor]="investimentos">Investimentos</a>
+        <mat-menu #investimentos="matMenu">
+            <a mat-menu-item [routerLink]="[ '/' ]">Investimentos</a>
+            <a mat-menu-item [routerLink]="[ '/' ]">Politica</a>
+            <a mat-menu-item [routerLink]="[ '/' ]">APRs</a>
+            <a mat-menu-item [routerLink]="[ '/' ]">Credenciamentos</a>
+        </mat-menu>
+        <a mat-menu-item [routerLink]="[ '/' ]">Balanço Financeiro</a>
+        <a mat-menu-item [routerLink]="[ '/' ]">Balanço Patrimonial</a>
+        <a mat-menu-item [routerLink]="[ '/' ]">Despesas com Pessoal e Previdencia</a>
+        <a mat-menu-item [routerLink]="[ '/' ]">Encerramento do Exercício Orçamentário</a>
+    </mat-menu>
+    <mat-menu #beneficios="matMenu">
+        <a mat-menu-item [routerLink]="['/']">Documentos Necessarios</a>
+        <a mat-menu-item [routerLink]="['/']">Manual de Aposentadoria</a>
+    </mat-menu>
+    <mat-menu #servicos="matMenu">
+        <a mat-menu-item [routerLink]="['/']">Extrato Previdenciario</a>
+        <a mat-menu-item [routerLink]="['/']">Holerite On-Line</a>
+    </mat-menu>
+    <mat-menu #editais="matMenu">
+        <a mat-menu-item [routerLink]="['/']">Concursos</a>
+        <a mat-menu-item [routerLink]="['/']">Licitações</a>
+        <a mat-menu-item [routerLink]="['/']">Credenciamentos</a>
+    </mat-menu>
+</mat-toolbar>

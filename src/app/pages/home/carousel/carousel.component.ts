@@ -12,11 +12,11 @@ export class CarouselComponent implements OnInit {
   direction = 'right';
   directionToggle = true;
   autoplay = true;
-  avatars = '1234567891234'.split('').map((x, i) => {
+  avatars = '123456'.split('').map((x, i) => {
     const num = i;
     // const num = Math.floor(Math.random() * 1000);
     return {
-      url: `https://picsum.photos/1920/300/?${num}`,
+      url: `/assets/header-bg-${num+1}.jpg`,
       title: `${num}`
     };
   });
